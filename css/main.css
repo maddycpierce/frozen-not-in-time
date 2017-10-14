@@ -48,6 +48,7 @@ a {
   opacity: 0;
   animation: blur 2s 800ms linear forwards;
   animation-delay: 3s;
+  transition-origin: left center;
 }
 
 /* Ice Cream attributes start here */
