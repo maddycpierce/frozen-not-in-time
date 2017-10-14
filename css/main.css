@@ -1,23 +1,46 @@
 html {
-  background: repeating-linear-gradient(-45deg, #d4fdff, #d4fdff 10px, #c9fcff 10px, #c9fcff 20px);
+  background: repeating-linear-gradient(-35deg, #d4fdff, #d4fdff 10px, #c9fcff 10px, #c9fcff 20px);
 }
 
 body {
   font-family: "Fredoka One", sans-serif;
-  border-top: 1em #b3fbff solid;
-  border-bottom: 1em #b3fbff solid;
+  border-top: .5em #b3fbff solid;
+  border-bottom: .5em #b3fbff solid;
   color: #c09;
 }
 
 h1 {
   color: #990073;
   transform: rotate(-10deg);
-  text-shadow: 1px 1px #c09;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, .2);
 }
 
 p {
   transform: rotate(-5deg);
   max-width: 19em;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, .2);
+}
+
+a {
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, .2);
+}
+
+.text {
+  animation: appear 1s steps(5);
+}
+
+@keyframes appear {
+  0% {
+    visibility: hidden;
+  }
+
+  50% {
+    visibility: visible;
+  }
+
+  100% {
+    visibility: visible;
+  }
 }
 
 .btn-ghost {
@@ -28,4 +51,55 @@ p {
 .btn-ghost:hover {
   color: #c09;
   border-color: #990073;
+}
+
+/* Ice Cream attributes start here */
+
+.icecream {
+  position: relative;
+}
+
+.cherry {
+  position: absolute;
+  left: 68%;
+  bottom: 8em;
+  z-index: 2000;
+  height: 50%;
+  width: auto;
+}
+
+.vanilla-fudge {
+  position: absolute;
+  left: 68%;
+  bottom: 2em;
+  z-index: 1500;
+  height: 100px;
+  width: auto;
+}
+
+.chocolate-chip {
+  position: absolute;
+  left: 70%;
+  bottom: 0em;
+  z-index: 1000;
+  height: 50%;
+  width: auto;
+}
+
+.mint-chip {
+  position: absolute;
+  left: 68%;
+  bottom: -6em;
+  z-index: 100;
+  height: 50%;
+  width: auto;
+}
+
+.cone {
+  position: absolute;
+  left: 68%;
+  top: 0em;
+  z-index: 500;
+  height: 50%;
+  width: auto;
 }
