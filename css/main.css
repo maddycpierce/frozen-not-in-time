@@ -1,9 +1,15 @@
 html {
+  font-family: "Fredoka One", sans-serif;
+}
+
+.banner {
   background: repeating-linear-gradient(-35deg, #d4fdff, #d4fdff 10px, #c9fcff 10px, #c9fcff 20px);
+  overflow: hidden;
+  padding-bottom: 6.5em;
 }
 
 body {
-  font-family: "Fredoka One", sans-serif;
+
   border-top: .5em #b3fbff solid;
   border-bottom: .5em #b3fbff solid;
   color: #c09;
@@ -16,36 +22,20 @@ h1 {
 }
 
 p {
-  transform: rotate(-5deg);
+  transform: rotate(-6deg);
   max-width: 19em;
   text-shadow: 2px 2px 1px rgba(0, 0, 0, .2);
+  margin-left: .5em;
 }
 
 a {
   text-shadow: 2px 2px 1px rgba(0, 0, 0, .2);
 }
 
-.text {
-  animation: appear 1s steps(5);
-}
-
-@keyframes appear {
-  0% {
-    visibility: hidden;
-  }
-
-  50% {
-    visibility: visible;
-  }
-
-  100% {
-    visibility: visible;
-  }
-}
-
 .btn-ghost {
   color: #c09;
   border-color: #990073;
+  margin-left: .5em;
 }
 
 .btn-ghost:hover {
@@ -53,53 +43,145 @@ a {
   border-color: #990073;
 }
 
+.text-wrapper {
+  animation: blur 2s 800ms linear forwards;
+  animation-delay: 3s;
+}
+
 /* Ice Cream attributes start here */
 
-.icecream {
+.icecream-wrapper {
   position: relative;
 }
 
 .cherry {
+  left: calc(50% - 40px);
+  z-index: 10;
+  top: -1200px;
+  width: 50px;
   position: absolute;
-  left: 68%;
-  bottom: 8em;
-  z-index: 2000;
-  height: 50%;
-  width: auto;
+  animation: cherry 700ms linear forwards;
 }
 
 .vanilla-fudge {
+  left: calc(50% - 80px);
+  z-index: 9;
+  top: -1200px;
+  width: 130px;
   position: absolute;
-  left: 68%;
-  bottom: 2em;
-  z-index: 1500;
-  height: 100px;
-  width: auto;
+  animation: vanilla-fudge 500ms linear forwards;
 }
 
 .chocolate-chip {
+  left: calc(50% - 70px);
+  z-index: 8;
+  top: -1200px;
+  width: 130px;
   position: absolute;
-  left: 70%;
-  bottom: 0em;
-  z-index: 1000;
-  height: 50%;
-  width: auto;
+  animation: chocolate-chip 200ms linear forwards;
 }
 
 .mint-chip {
+  left: calc(50% - 90px);
+  z-index: 7;
+  top: -1200px;
+  width: 130px;
   position: absolute;
-  left: 68%;
-  bottom: -6em;
-  z-index: 100;
-  height: 50%;
-  width: auto;
+  animation: mint-chip 300ms linear forwards;
 }
 
 .cone {
+  left: calc(50% - 90px);
+  z-index: 11;
+  top: -1200px;
+  width: 130px;
   position: absolute;
-  left: 68%;
-  top: 0em;
-  z-index: 500;
-  height: 50%;
-  width: auto;
+  animation: cone 300ms linear forwards;
+}
+
+@keyframes blur {
+
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+
+}
+
+@keyframes cherry {
+
+  0% {
+    top: -1200px;
+  }
+
+  100% {
+    top: 10px;
+  }
+
+}
+
+@keyframes vanilla-fudge {
+
+  0% {
+    top: -1200px;
+  }
+
+  100% {
+    top: 10px;
+  }
+
+}
+
+@keyframes chocolate-chip {
+
+  0% {
+    top: -1200px;
+  }
+
+  100% {
+    top: 10px;
+  }
+
+}
+
+@keyframes mint-chip {
+
+  0% {
+    top: -1200px;
+  }
+
+  100% {
+    top: 10px;
+  }
+
+}
+
+@keyframes cone {
+
+  0% {
+    top: -1200px;
+  }
+
+  100% {
+    top: 10px;
+  }
+
+}
+
+@media only screen and (min-width: 90em) {
+
+  .banner {
+    padding-left: 10em;
+    padding-right: 9em;
+  }
+
+  .text-wrapper {
+    padding-top: 2em;
+  }
+
 }
