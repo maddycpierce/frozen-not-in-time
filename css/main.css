@@ -25,7 +25,7 @@ p {
   transform: rotate(-6deg);
   max-width: 19em;
   text-shadow: 2px 2px 1px rgba(0, 0, 0, .2);
-  margin-left: .5em;
+  margin-left: .25em;
 }
 
 a {
@@ -35,17 +35,19 @@ a {
 .btn-ghost {
   color: #c09;
   border-color: #990073;
-  margin-left: .5em;
+  margin-left: .25em;
 }
 
 .btn-ghost:hover {
   color: #c09;
   border-color: #990073;
+  background-color: rgba(153, 0, 115, .2);
 }
 
 .text-wrapper {
-  animation: blur 2s 800ms linear forwards;
-  animation-delay: 3s;
+  opacity: 0;
+  animation: blur 1s 800ms linear forwards;
+  animation-delay: 1s;
 }
 
 /* Ice Cream attributes start here */
@@ -55,48 +57,53 @@ a {
 }
 
 .cherry {
-  left: calc(50% - 40px);
+  left: calc(50% + 510px);
   z-index: 10;
   top: -1200px;
-  width: 50px;
+  width: 165px;
   position: absolute;
   animation: cherry 700ms linear forwards;
+  animation-delay: 5s;
 }
 
 .vanilla-fudge {
-  left: calc(50% - 80px);
+  left: calc(50% + 500px);
   z-index: 9;
   top: -1200px;
-  width: 130px;
+  width: 175px;
   position: absolute;
   animation: vanilla-fudge 500ms linear forwards;
+  animation-delay: 4s;
 }
 
 .chocolate-chip {
-  left: calc(50% - 70px);
+  left: calc(50% + 520px);
   z-index: 8;
   top: -1200px;
-  width: 130px;
+  width: 175px;
   position: absolute;
   animation: chocolate-chip 200ms linear forwards;
+  animation-delay: 3s;
 }
 
 .mint-chip {
-  left: calc(50% - 90px);
+  left: calc(50% + 510px);
   z-index: 7;
   top: -1200px;
-  width: 130px;
+  width: 175px;
   position: absolute;
   animation: mint-chip 300ms linear forwards;
+  animation-delay: 2s;
 }
 
 .cone {
-  left: calc(50% - 90px);
+  left: calc(50% + 510px);
   z-index: 11;
   top: -1200px;
-  width: 130px;
+  width: 175px;
   position: absolute;
   animation: cone 300ms linear forwards;
+  animation-delay: 1s;
 }
 
 @keyframes blur {
@@ -120,7 +127,7 @@ a {
   }
 
   100% {
-    top: 10px;
+    top: -370px;
   }
 
 }
@@ -132,7 +139,7 @@ a {
   }
 
   100% {
-    top: 10px;
+    top: -300px;
   }
 
 }
@@ -144,7 +151,7 @@ a {
   }
 
   100% {
-    top: 10px;
+    top: -225px;
   }
 
 }
@@ -156,7 +163,7 @@ a {
   }
 
   100% {
-    top: 10px;
+    top: -150px;
   }
 
 }
@@ -168,7 +175,7 @@ a {
   }
 
   100% {
-    top: 10px;
+    top: -50px;
   }
 
 }
@@ -184,4 +191,7 @@ a {
     padding-top: 2em;
   }
 
+  .icecream-wrapper {
+    left: calc(15% + 15px);
+  }
 }
